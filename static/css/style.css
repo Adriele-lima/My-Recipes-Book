@@ -34,6 +34,16 @@ body {
     background-color: transparent;
 }
 
+.hr {
+    max-width: 250px;
+}
+
+.img-size {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+}
+
 .image-container {
     position: relative;
 }
