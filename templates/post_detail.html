@@ -2,4 +2,44 @@
 
 {% block content %}
 
+<div class="container-fluid">
+    <div class="row">
+        {% for post in post_list %}
+        <div class="col-md-6">
+            <div class="card mb-12">
+                <div class="card-body">
+                    <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img-top"
+                            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                        {% endif %}
+                        <div class="image-flash">
+                            <p class="author">Author: {{ post.author }}</p>
+                        </div>
+                    </div>
+                    <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                        {{ post.number_of_likes }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-12">
+                <h1 class="card-title">{{ post.title }}</h1>
+                <hr />
+                <h2>Ingredients:</h2>
+                <p class="card-text">{{ post.ingredients_content }}</p>
+                <h2>Method:</h2>
+                <p>{{ post.method_content }}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+</div>
+
+</div>
+
 {% endblock content %}
