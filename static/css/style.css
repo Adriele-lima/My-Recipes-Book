@@ -29,6 +29,10 @@ body {
     background-color: #F9FAFC;
 }
 
+#card {
+    align-items: center;
+}
+
 .card {
     border: none;
     background-color: transparent;
