@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-adrielelima-myrecipesbo-u0g2h8erlet.ws-eu103.gitpod.io',
+    '8000-adrielelima-myrecipesbo-u0g2h8erlet.ws-eu104.gitpod.io',
     'https://my-recipes-book-pp4-3364500b645d.herokuapp.com/',
 ]
 

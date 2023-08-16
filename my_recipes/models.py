@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
@@ -11,6 +13,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now=True)
     ingredients_content = models.TextField()
     method_content = models.TextField()
+    status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
 
     class Meta:

@@ -1,10 +1,9 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block content %}
 
 <div class="container-fluid">
     <div class="row">
-        {% for post in post_list %}
         <div class="col-md-6">
             <div class="card mb-12">
                 <div class="card-body">
@@ -34,12 +33,7 @@
                 <p>{{ post.method_content }}</p>
             </div>
         </div>
-        {% endfor %}
-
     </div>
-</div>
-</div>
-
 </div>
 
 {% endblock content %}
