@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic, View
 from django.http import HttpResponse
 from .models import Post
@@ -26,3 +26,9 @@ class PostDetail(View):
             )
         else:
             return HttpResponse("Post not found", status=404)
+
+    def create_recipe(request):
+        if request.method == 'POST':
+            
+            return redirect('index')
+        return render(request, 'create_recipe.html')
