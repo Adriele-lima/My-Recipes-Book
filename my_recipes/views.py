@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import generic, View
 from django.http import HttpResponse
 from .models import Post
+from .forms import RecipeForm
 
 
 class PostList(generic.ListView):
@@ -29,6 +30,13 @@ class PostDetail(View):
 
     def create_recipe(request):
         if request.method == 'POST':
-            
-            return redirect('index')
-        return render(request, 'create_recipe.html')
+            form = RecipeForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('home')
+
+        form = RecipeForm()
+        context = {
+            'form': form
+        }
+        return render(request, 'create_recipe.html', context)

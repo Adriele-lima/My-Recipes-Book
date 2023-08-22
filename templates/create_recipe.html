@@ -2,8 +2,19 @@
 
 {% block content %}
 
-<h1>Test</h1>
+<h1>Share your recipe with us!</h1>
 
+<form action="create_recipe" method="POST">
+    {% csrf_token %}
 
+    {{ form }}
+
+    <div>
+        <p>
+            <button type="submit">Add Recipe</button>
+        </p>
+    </div>
+
+</form>
 
 {%endblock%}
