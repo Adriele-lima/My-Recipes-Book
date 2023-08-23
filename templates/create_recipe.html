@@ -2,16 +2,38 @@
 
 {% block content %}
 
-<h1>Share your recipe with us!</h1>
+<h1 class="form-title">Share your recipe with us!</h1>
 
-<form action="create_recipe" method="POST">
+<form action="create_recipe" method="POST" enctype="multipart/form-data" class="row g-12 form-recipe">
     {% csrf_token %}
 
-    {{ form }}
-
-    <div>
+    <div class="row md-12">
+        <label for="featured_image" class="col-form-label brand">Recipe image:</label>
+        <div class="input-box-size">
+            {{ form.featured_image }}
+        </div>
+    </div>
+    <div class="row md-12">
+        <label for="title" class="col-form-label brand">Recipe Name:</label>
+        <div class="col-md-3 input-box-size">
+            {{ form.title }}
+        </div>
+    </div>
+    <div class="row md-12">
+        <label for="ingredients_content'" class="col-form-label brand">Ingredients:</label>
+        <div class="input-box-size">
+            {{ form.ingredients_content }}
+        </div>
+    </div>
+    <div class="row md-12">
+        <label for="method_content" class="col-form-label brand">Method:</label>
+        <div class="input-box-size">
+            {{ form.method_content }}
+        </div>
+    </div>
+    <div class="row md-12">
         <p>
-            <button type="submit">Add Recipe</button>
+            <button class="button-form" type="submit">Add Recipe</button>
         </p>
     </div>
 

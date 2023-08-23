@@ -48,6 +48,43 @@ body {
     background-size: cover;
 }
 
+.input-box-size textarea, input{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.form-title {
+    font-family: Lato, sans-serif;;
+    color: #383838;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-recipe {
+    margin: 20px 60px;
+    border: 2px solid #445261;
+    border-radius: 20px;
+    width: 100%;
+    max-width: fit-content;
+    justify-content: center;
+    background-color: rgba(245, 206, 213, 0.363);
+}
+
+input::file-selector-button, .button-form {
+    width: 150px;
+    font-weight: bold;
+    color: #383838;
+    margin: 8px;
+    padding: 0.5em;
+    border: 1px solid #445261;
+    border-radius: 3px;
+}
+
+#id_featured_image {
+    border-radius: 8px;
+    border: 1px inset #445261;
+}
+
 .image-container {
     position: relative;
 }
