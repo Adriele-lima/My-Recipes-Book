@@ -54,3 +54,8 @@ class PostDetail(View):
             'form': form
         }
         return render(request, 'edit_recipe.html', context)
+
+    def delete_recipe(request, slug):
+        item = get_object_or_404(Post, slug=slug)
+        item.delete()
+        return redirect('home')
