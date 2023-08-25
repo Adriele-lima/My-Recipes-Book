@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponse
 from .models import Post
@@ -36,6 +36,20 @@ class PostDetail(View):
                 return redirect('home')
 
         form = RecipeForm()
+        context = {
+            'form': form
+        }
+        return render(request, 'create_recipe.html', context)
+
+    def edit_recipe(request, slug):
+        item = get_object_or_404(Post, slug=slug)
+        if request.method == 'POST':
+            form = RecipeForm(request.POST, request.FILES, instance=item)
+            if form.is_valid():
+                form.save()
+                return redirect('home')
+
+        form = RecipeForm(instance=item)
         context = {
             'form': form
         }
