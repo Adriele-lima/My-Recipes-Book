@@ -28,6 +28,9 @@ class PostDetail(View):
         else:
             return HttpResponse("Post not found", status=404)
 
+
+class CreateRecipe(View):
+
     def create_recipe(request):
         if request.method == 'POST':
             form = RecipeForm(request.POST, request.FILES)
@@ -40,6 +43,9 @@ class PostDetail(View):
             'form': form
         }
         return render(request, 'create_recipe.html', context)
+
+
+class EditRecipe(View):
 
     def edit_recipe(request, slug):
         item = get_object_or_404(Post, slug=slug)
@@ -54,6 +60,9 @@ class PostDetail(View):
             'form': form
         }
         return render(request, 'edit_recipe.html', context)
+
+
+class DeleteRecipe(View):
 
     def delete_recipe(request, slug):
         item = get_object_or_404(Post, slug=slug)
