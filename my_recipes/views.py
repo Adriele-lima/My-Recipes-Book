@@ -53,4 +53,4 @@ class PostDetail(View):
         context = {
             'form': form
         }
-        return render(request, 'create_recipe.html', context)
+        return render(request, 'edit_recipe.html', context)
