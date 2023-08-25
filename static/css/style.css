@@ -80,6 +80,11 @@ input::file-selector-button, .button-form {
     border-radius: 3px;
 }
 
+.login:p:last-child {
+    justify-content: inherit;
+    display: table;
+}
+
 #id_featured_image {
     border-radius: 8px;
     border: 1px inset #445261;
