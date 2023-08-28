@@ -2,6 +2,7 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 <h1 class="form-title">Share your recipe with us!</h1>
 
 <form action="create_recipe" method="POST" enctype="multipart/form-data" class="row g-12 form-recipe">
@@ -50,5 +51,18 @@
     </div>
 
 </form>
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3>Failed!</h3>
+
+            <p>Sorry, to access this page you need to be a member. To create a recipe, please log in. If
+                you have not created an account yet, then <a class="link" href="{% url 'account_signup' %}">sign up</a>
+                first.</p>
+        </div>
+    </div>
+</div>
+{% endif %}
 
 {%endblock%}
