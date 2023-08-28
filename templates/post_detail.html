@@ -18,8 +18,25 @@
                             <p class="author">Author: {{ post.author }}</p>
                         </div>
                     </div>
-                    <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                        {{ post.number_of_likes }}</p>
+                    <div class="col-1">
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form action="{% url 'post_like' post.slug %}" method="POST" class="d-inline">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="like_btn_id" value="{{ post.slug }}" class="btn-like">
+                                    <i class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="like_btn_id" value="{{ post.slug }}" class="btn-like">
+                                    <i class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                            <span class="text-secondary">{{ post.number_of_likes }}</span>
+                        </strong>
+                    </div>
                 </div>
             </div>
         </div>

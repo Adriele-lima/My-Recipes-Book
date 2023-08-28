@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Post
 from .forms import RecipeForm
 
@@ -68,3 +68,16 @@ class DeleteRecipe(View):
         item = get_object_or_404(Post, slug=slug)
         item.delete()
         return redirect('home')
+
+
+class PostLike(View):
+
+    def post_like(self, request, slug, *args, **kwargs):
+        item = get_object_or_404(Post, slug=slug)
+
+        if item.likes.filter(id=request.user.id).exists():
+            item.likes.remove(request.user)
+        else:
+            item.likes.add(request.user)
+            
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
