@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.views import generic, View
 from django.http import HttpResponse, HttpResponseRedirect
-from django.template.loader import render_to_string
 from .models import Post
 from .forms import RecipeForm
 
@@ -68,9 +67,8 @@ class DeleteRecipe(View):
 
     def get(self, request, slug):
         item = get_object_or_404(Post, slug=slug)
-
-        confirmation_content = render_to_string('confirmation_template.html', {'item': item})
-        return HttpResponse(confirmation_content)
+        context = {'item': item}
+        return render(request, 'delete_recipe.html', context)
 
     def post(self, request, slug):
         item = get_object_or_404(Post, slug=slug)
