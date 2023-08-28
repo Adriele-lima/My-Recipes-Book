@@ -172,12 +172,12 @@ input::file-selector-button, .button-form {
     color: #484848;
 }
 
-.footer-github-link {
+.footer-social-link {
     text-decoration: none;
     color: #484848;
 }
 
-.footer-github-link:hover {
+.footer-social-link:hover {
     color: rgb(156, 156, 156);
 }
 
