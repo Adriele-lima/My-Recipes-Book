@@ -185,3 +185,12 @@ input::file-selector-button, .button-form {
     height: 80px;
     width: 150px;
 }
+
+@media screen and (max-width: 500px){
+    
+    .form-recipe {
+        margin: 0px;
+        font-size: 10px;
+    }
+
+}

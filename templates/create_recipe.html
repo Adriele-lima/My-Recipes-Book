@@ -3,9 +3,9 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<h1 class="form-title">Share your recipe with us!</h1>
+<h1 class="form-title container">Share your recipe with us!</h1>
 
-<form action="create_recipe" method="POST" enctype="multipart/form-data" class="row g-12 form-recipe">
+<form action="create_recipe" method="POST" enctype="multipart/form-data" class="row form-recipe">
     {% csrf_token %}
 
     <div class="row md-12">
