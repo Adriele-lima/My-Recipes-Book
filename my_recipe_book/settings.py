@@ -32,7 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-adrielelima-myrecipesbo-e47vlvf66nx.ws-eu104.gitpod.io',
-    'https://my-recipes-book-pp4-3364500b645d.herokuapp.com/',
+    'my-recipes-book-pp4-3364500b645d.herokuapp.com',
 ]
 
 
