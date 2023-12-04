@@ -2,6 +2,7 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 <div class="container alert alert-danger">
     <h1>Confirm Deletion</h1>
         <p>Are you sure you want to delete "{{ item.title }}"?</p>
@@ -11,4 +12,12 @@
             <a href="{% url 'home' %}" class="btn">Cancel</a>
         </form>
 </div>
+{% else %}
+
+<h1 class="text-center mt-5">Failed!</h1>
+<p class="text-center mt-5">Sorry, to access this page you need to be a member, please <a class="link"
+        href="{% url 'account_login' %}">log in now.</a> If you have not created an account yet, then <a class="link"
+        href="{% url 'account_signup' %}">sign up first.</a></p>
+
+{% endif %}
 {%endblock%}

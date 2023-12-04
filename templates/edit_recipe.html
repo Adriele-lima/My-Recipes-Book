@@ -2,9 +2,10 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 <h1 class="form-title">Edit your recipe:</h1>
 
-<form method="POST" enctype="multipart/form-data" class="row g-12 form-recipe">
+<form action="edit_recipe" method="POST" enctype="multipart/form-data" class="row g-12 form-recipe">
     {% csrf_token %}
 
     <div class="row md-12">
@@ -50,5 +51,14 @@
     </div>
 
 </form>
+
+{% else %}
+
+<h1 class="text-center mt-5">Failed!</h1>
+<p class="text-center mt-5">Sorry, to access this page you need to be a member, please <a class="link"
+        href="{% url 'account_login' %}">log in now.</a> If you have not created an account yet, then <a class="link"
+        href="{% url 'account_signup' %}">sign up first.</a></p>
+
+{% endif %}
 
 {%endblock%}

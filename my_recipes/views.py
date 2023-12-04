@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.views import generic, View
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from .models import Post
 from .forms import RecipeForm
 
@@ -30,6 +31,7 @@ class PostDetail(View):
             return HttpResponse("Post not found", status=404)
 
 
+@login_required
 class CreateRecipe(View):
 
     def create_recipe(request):
@@ -46,6 +48,7 @@ class CreateRecipe(View):
         return render(request, 'create_recipe.html', context)
 
 
+@login_required
 class EditRecipe(View):
 
     def edit_recipe(request, slug):
