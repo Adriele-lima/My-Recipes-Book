@@ -5,7 +5,7 @@
 {% if user.is_authenticated %}
 <h1 class="form-title">Edit your recipe:</h1>
 
-<form action="edit_recipe" method="POST" enctype="multipart/form-data" class="row g-12 form-recipe">
+<form method="POST" enctype="multipart/form-data" class="row g-12 form-recipe">
     {% csrf_token %}
 
     <div class="row md-12">

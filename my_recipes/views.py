@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.views import generic, View
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Post
 from .forms import RecipeForm
 
@@ -39,7 +40,8 @@ class CreateRecipe(View):
             form = RecipeForm(request.POST, request.FILES)
             if form.is_valid():
                 form.save()
-                return redirect('home')
+                messages.success(request, 'Your recipe was successfully created!')
+                return redirect(reverse('home'))
 
         form = RecipeForm()
         context = {
@@ -57,7 +59,8 @@ class EditRecipe(View):
             form = RecipeForm(request.POST, request.FILES, instance=item)
             if form.is_valid():
                 form.save()
-                return redirect('home')
+                messages.success(request, 'Your recipe was successfully edited!')
+                return redirect(reverse('home'))
 
         form = RecipeForm(instance=item)
         context = {
@@ -76,6 +79,7 @@ class DeleteRecipe(View):
     def post(self, request, slug):
         item = get_object_or_404(Post, slug=slug)
         item.delete()
+        messages.success(request, 'Your recipe was successfully deleted!')
         return redirect('home')
 
 
