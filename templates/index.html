@@ -14,19 +14,20 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="img-size card-img-top"
-                                    src="https://images.pexels.com/photos/4033165/pexels-photo-4033165.jpeg">
+                                <a href="{% url 'post_detail' post.slug %}" class="post-link"><img class="img-size card-img-top"
+                                        src="https://images.pexels.com/photos/4033165/pexels-photo-4033165.jpeg">
+                                    <h4 class="card-title">{{ post.title }}</h4>
+                                </a>
                                 {% else %}
-                                <img class="img-size card-img-top" src=" {{ post.featured_image.url }}">
+                                <a href="{% url 'post_detail' post.slug %}" class="post-link"><img
+                                        class="img-size card-img-top" src=" {{ post.featured_image.url }}">
+                                    <h4 class="card-title">{{ post.title }}</h4>
+                                </a>                                
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h4 class="card-title">{{ post.title }}</h4>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
                             {% if user == post.author %}
                             <p>
                                 <a href="/edit/{{ post.slug }}">
