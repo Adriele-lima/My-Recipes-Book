@@ -15,12 +15,12 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link"><img class="img-size card-img-top"
-                                        src="https://images.pexels.com/photos/4033165/pexels-photo-4033165.jpeg">
+                                        src="https://images.pexels.com/photos/4033165/pexels-photo-4033165.jpeg" alt="{{ post.title }}">
                                     <h4 class="card-title">{{ post.title }}</h4>
                                 </a>
                                 {% else %}
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link"><img
-                                        class="img-size card-img-top" src=" {{ post.featured_image.url }}">
+                                        class="img-size card-img-top" src=" {{ post.featured_image.url }}" alt="recipe_default_image">
                                     <h4 class="card-title">{{ post.title }}</h4>
                                 </a>                                
                                 {% endif %}
