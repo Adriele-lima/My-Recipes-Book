@@ -29,8 +29,8 @@ body {
     background-color: #F9FAFC;
 }
 
-#cards {
-    align-items: center;
+.cards {
+    align-items: center !important;
 }
 
 .card {

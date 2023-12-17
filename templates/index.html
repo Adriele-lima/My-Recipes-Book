@@ -11,7 +11,7 @@
                 {% for post in post_list %}
                 <div class="col md-2 sm-4">
                     <div class="card mb-4">
-                        <div id="cards" class="card-body">
+                        <div class="cards card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link"><img class="img-size card-img-top"
