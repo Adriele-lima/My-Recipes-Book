@@ -10,9 +10,9 @@
                     <div class="image-container">
                         {% if "placeholder" in post.featured_image.url %}
                         <img class="card-img-top"
-                            src="https://images.pexels.com/photos/4033165/pexels-photo-4033165.jpeg">
+                            src="https://images.pexels.com/photos/4033165/pexels-photo-4033165.jpeg" alt="{{ post.title }}">
                         {% else %}
-                        <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                        <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="recipe_default_image">
                         {% endif %}
                         <div class="image-flash">
                             <p class="author">Author: {{ post.author }}</p>
@@ -32,7 +32,7 @@
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="fa-regular fa-heart"></i></i></span>
+                            <span class="text-secondary"><i class="fa-regular fa-heart"></i></span>
                             {% endif %}
                             <span class="text-secondary">{{ post.number_of_likes }}</span>
                         </strong>
@@ -43,7 +43,7 @@
         <div class="col-md-6">
             <div class="card mb-12">
                 <h1 class="card-title">{{ post.title }}</h1>
-                <hr />
+                <hr>
                 <h2>Ingredients:</h2>
                 <p class="card-text">{{ post.ingredients_content }}</p>
                 <h2>Method:</h2>
