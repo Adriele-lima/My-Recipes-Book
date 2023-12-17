@@ -21,7 +21,7 @@
                                 {% else %}
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link"><img
                                         class="img-size card-img-top" src=" {{ post.featured_image.url }}" alt="recipe_default_image">
-                                    <h4 class="card-title">{{ post.title }}</h4>
+                                    <h4 class="card-title text-center">{{ post.title }}</h4>
                                 </a>                                
                                 {% endif %}
                                 <div class="image-flash">
@@ -38,7 +38,6 @@
                                 </a>
                             </P>
                             {% endif %}
-                            <hr class="hr">
                             <p class="card-text text-muted h6">{{ post.created_on }}
                                 <i class="far fa-heart"></i>{{ post.number_of_likes }}</p>
                         </div>

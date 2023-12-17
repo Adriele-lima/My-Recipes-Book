@@ -31,6 +31,8 @@ body {
 
 .cards {
     align-items: center !important;
+    display: flex;
+    flex-direction: column;
 }
 
 .card {
@@ -101,7 +103,7 @@ input::file-selector-button, .button-form {
 
 .image-flash {
     position: absolute;
-    bottom: 10%;
+    bottom: 13%;
     min-width: 30%;
     left: 1px;
     background-color: #484848;
