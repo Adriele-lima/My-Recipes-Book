@@ -2,6 +2,30 @@
 
 Welcome to [My Recipes Book!](https://my-recipes-book-pp4-3364500b645d.herokuapp.com/) This is a web application designed to help you manage and organize your collection of recipes. Whether you're a seasoned chef or just starting out in the kitchen, this app is here to make your cooking experience more enjoyable and efficient.
 
+## Table of Contents
+
+* [UX Design](#heavy_check_mark-ux-design)
+* [Technologies](#heavy_check_mark-technologies)
+* [Exiting Features](#heavy_check_mark-existing-features)
+* [Testing](#heavy_check_mark-testing)
+    * [Responsiveness](#round_pushpin-responsiveness)
+    * [Browser Compatibility](#round_pushpin-browser-compability-testing)
+    * [Code Validation](#round_pushpin-code-validation)
+        * [HTML](#html)
+        * [CSS](#css)
+        * [Java Script](#javascript)
+        * [Python](#python)
+        * [Light House](#lighthouse)
+* [Deployment](#heavy_check_mark-deployment)
+    * [How to Fork](#round_pushpin-how-to-fork)
+    * [How to Deploy](#round_pushpin-how-to-deploy)
+* [Credits](#heavy_check_mark-credits)
+
+
+## :heavy_check_mark: UX Design
+
+## :heavy_check_mark: Technologies
+
 ## :heavy_check_mark: Existing Features
 
 - __Initial Page__
