@@ -10,12 +10,13 @@ Welcome to [My Recipes Book!](https://my-recipes-book-pp4-3364500b645d.herokuapp
 * [Testing](#heavy_check_mark-testing)
     * [Responsiveness](#round_pushpin-responsiveness)
     * [Browser Compatibility](#round_pushpin-browser-compability-testing)
+    * [Light House](#lighthouse)
+    * [Agile and Milestones](#agile-and-milestone)
     * [Code Validation](#round_pushpin-code-validation)
         * [HTML](#html)
         * [CSS](#css)
         * [Java Script](#javascript)
         * [Python](#python)
-        * [Light House](#lighthouse)
 * [Deployment](#heavy_check_mark-deployment)
     * [How to Fork](#round_pushpin-how-to-fork)
     * [How to Deploy](#round_pushpin-how-to-deploy)
@@ -24,7 +25,95 @@ Welcome to [My Recipes Book!](https://my-recipes-book-pp4-3364500b645d.herokuapp
 
 ## :heavy_check_mark: UX Design
 
+### :round_pushpin: The Strategy Plane
+
+*  Recipes Book is intended to be a friendly community site for users to create and share their own recipes with others.
+Users will also be able to find recipes created by other users from around the world. The graphical elements and overall
+design of the site provide the user with a fun and enjoyable environment.
+
+### :round_pushpin: The Sites Ideal User
+
+* Food lover looking to share their favourite recipes with others
+* Someone looking to expand their recipe knowledge
+* Someone looking for inspiration for new things to try
+* Someone looking build their cooking social media following
+
+### :round_pushpin: Site Goals
+
+* To provide users with a place to find recipes
+* To provide users with a place to share their own recipes
+* To provide users with a place to discover new meals
+
+### :round_pushpin: User stories
+
+From the Epics, 15 User stories were developed. Each story was assigned a classification of Must-Have and Could-Have.
+I will however revisit them at a later time for a redevelopment of the project. 
+
+These are the user stories that were completed within the projects first release.
+
+![Milestones](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/user-stories.jpg)
+
+### :round_pushpin: The Scope Plane
+
+**Features planned:**
+
+* User Profile
+* Recipes - Users can create, read, update and delete their own recipes
+* Other Users Recipes - Users can read and like
+* Users can login to their account
+* Users can logout of their account
+* Users need to be registered and logged in to access recipe creation, likes, and edit their own recipes.
+
+### :round_pushpin: Future Enhancements
+
+There are several items of functionality that I would like to add in the future. 
+The key areas I would like to add to the site in the future are:
+
+* The ability for users to message other users
+* The ability for users to comment on recipes
+* The ability for users to login via social networks such as google or facebook
+* Save recipes that they like on their profile
+* Search functionality
+  
 ## :heavy_check_mark: Technologies
+
+* Python
+    * The following python modules were used on this project:
+        * asgiref==3.7.2
+        * cloudinary==1.34.0
+        * dj-database-url==0.5.0
+        * dj3-cloudinary-storage==0.0.6
+        * Django==3.2.20
+        * django-allauth==0.55.0
+        * django-summernote==0.8.20.0
+        * gunicorn==21.2.0
+        * oauthlib==3.2.2
+        * psycopg2==2.9.7
+        * PyJWT==2.8.0
+        * python3-openid==3.2.0
+        * requests-oauthlib==1.3.1
+        * sqlparse==0.4.4
+        * urllib3==1.26.16
+
+* Django
+    * Django was used as the main python framework in the development of this project.
+    * Django AllAuth was utilised to provide enhanced user account management functionality.
+* Heroku
+    * Was used as the cloud based platform to deploy the site on.
+* Heroku PostgreSQL
+    * Heroku PostgreSQL was used as the database for this project during development and in production.
+* JavaScript
+    * Custom JavaScript was utilised to set time for messages.
+* Bootstrap 5.13
+    * Bootstrap was used for general layout and spacing requirements for the site.
+* Font Awesome
+    * Was used for access for different sections where icons were appropriate.
+* CSS
+    * Custom css was written for a large number of areas on the site to implement custom styling and escape a bootstrap look and feel to the site.
+* Jinja/Django Templating
+    * Jinja/Django templating language was utilised to insert data from the database into the sites pages. It was also utilised to perform queries on different datasets.
+* HTML
+    * HTML was used as the base language for the templates created for the site.
 
 ## :heavy_check_mark: Existing Features
 
@@ -94,9 +183,23 @@ The deployed project was tested on multiple browsers to check for compatibility 
 
 ![Mobile](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/Mobile.jpeg)
 
+
+### :round_pushpin: LIGHTHOUSE
+
+The deployed project was tested using the Lighthouse Audit tool to check for any major issues.
+
+![Light House](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/light_house.jpg)
+
+
+### :round_pushpin: Agile and Milestone
+
+![Agile](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/agile.jpg)
+
+![Milestones](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/milestones.jpg)
+
 ### :round_pushpin: CODE VALIDATION:
 
-### HTML
+### :round_pushpin: HTML
 
 [HTML Validator](https://validator.w3.org/nu/) to validate all HTML files. The result for each page is listed below:
 
@@ -157,7 +260,7 @@ The deployed project was tested on multiple browsers to check for compatibility 
 
 ![Logout_page](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/HTML_logout_account.jpg)
 
-### CSS
+### :round_pushpin: CSS
 
 [The CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator/) was used to validate the CSS file.
  
@@ -169,7 +272,7 @@ The deployed project was tested on multiple browsers to check for compatibility 
 
 ![CSS_test](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/CSS.jpg)
 
-### JAVASCRIPT
+### :round_pushpin: JAVASCRIPT
 
 [The JShint Validator](https://jshint.com/) was used to validate the JavaScript file.
 
@@ -177,7 +280,7 @@ The deployed project was tested on multiple browsers to check for compatibility 
 
 ![Javascript_test](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/JAVASCRIPT.jpg)
 
-### PYTHON:
+### :round_pushpin: PYTHON:
 
 [The Code Institute Python Linterwas](https://pep8ci.herokuapp.com/) was used to validate all Python files.
 
@@ -216,14 +319,6 @@ The deployed project was tested on multiple browsers to check for compatibility 
 :white_check_mark: No errors found.
 
 ![My recipes Models](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/PYTHON_model.jpg)
-
-
-### LIGHTHOUSE
-
-The deployed project was tested using the Lighthouse Audit tool to check for any major issues.
-
-![Light House](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/light_house.jpg)
-
 
 ## :heavy_check_mark: Deployment
 
@@ -374,8 +469,11 @@ How to deploy the repository:
    
 12. The live link can be found here [My Recipes Book](https://my-recipes-book-pp4-3364500b645d.herokuapp.com/)
 
-## :heavy_check_mark: Agile and Milestone
-
 ## :heavy_check_mark: Credits
 
+The useful support needed came from:
+
+[Code Institute](https://codeinstitute.net/ie/)
+[Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+[GitHub - Markdown Guide](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
