@@ -106,9 +106,11 @@ The key areas I would like to add to the site in the future are:
     * Django was used as the main python framework in the development of this project.
     * Django AllAuth was utilised to provide enhanced user account management functionality.
 * Heroku
-    * Was used as the cloud based platform to deploy the site on.
+    * Heroku Was used as the cloud based platform to deploy the site on.
 * ElephantSQL - Postgres
     * ElephantSQL was used as the database for this project during development and in production.
+* Cloudinary
+    * Cloudinary was used to storage all the images files from recipes.   
 * JavaScript
     * Custom JavaScript was utilised to set time for messages.
 * Bootstrap 5.13
