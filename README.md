@@ -5,18 +5,25 @@ Welcome to [My Recipes Book!](https://my-recipes-book-pp4-3364500b645d.herokuapp
 ## Table of Contents
 
 * [UX Design](#heavy_check_mark-ux-design)
+    * [The Strategy Plane](#round_pushpin-the-strategy-plane)
+    * [The Sites Ideal User](#round_pushpin-the-sites-ideal-user)
+    * [Site Goals](#round_pushpin-site-goals)
+    * [User Stories](#round_pushpin-user-stories)
+    * [The Scope Planned](#round_pushpin-the-scope-plane)
+    * [Future Enhancements](#round_pushpin-future-enhancements)
 * [Technologies](#heavy_check_mark-technologies)
 * [Exiting Features](#heavy_check_mark-existing-features)
 * [Testing](#heavy_check_mark-testing)
     * [Responsiveness](#round_pushpin-responsiveness)
     * [Browser Compatibility](#round_pushpin-browser-compability-testing)
-    * [Light House](#lighthouse)
-    * [Agile and Milestones](#agile-and-milestone)
+    * [Light House](#round_pushpin-lighthouse)
+    * [Agile and Milestones](#round_pushpin-agile-and-milestone)
+    * [Bugs]()
     * [Code Validation](#round_pushpin-code-validation)
-        * [HTML](#html)
-        * [CSS](#css)
-        * [Java Script](#javascript)
-        * [Python](#python)
+        * [HTML](#round_pushpin-html)
+        * [CSS](#round_pushpin-css)
+        * [Java Script](#round_pushpin-javascript)
+        * [Python](#round_pushpin-python)
 * [Deployment](#heavy_check_mark-deployment)
     * [How to Fork](#round_pushpin-how-to-fork)
     * [How to Deploy](#round_pushpin-how-to-deploy)
@@ -196,6 +203,14 @@ The deployed project was tested using the Lighthouse Audit tool to check for any
 ![Agile](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/agile.jpg)
 
 ![Milestones](https://github.com/Adriele-lima/My-Recipes-Book/blob/main/static/images/milestones.jpg)
+
+### :round_pushpin: Bugs
+
+:x: One bug found when testing the user registration. I found that I missed to add the Account Email verification on Setting.py.
+
+:white_check_mark: After I add the missing information the error was gone.
+
+![Bug error](https://github.com/Adriele-lima/My-recipes-Book/blob/main/static/images/Error_signup.png)
 
 ### :round_pushpin: CODE VALIDATION:
 
