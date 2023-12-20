@@ -107,8 +107,8 @@ The key areas I would like to add to the site in the future are:
     * Django AllAuth was utilised to provide enhanced user account management functionality.
 * Heroku
     * Was used as the cloud based platform to deploy the site on.
-* Heroku PostgreSQL
-    * Heroku PostgreSQL was used as the database for this project during development and in production.
+* ElephantSQL - Postgres
+    * ElephantSQL was used as the database for this project during development and in production.
 * JavaScript
     * Custom JavaScript was utilised to set time for messages.
 * Bootstrap 5.13
